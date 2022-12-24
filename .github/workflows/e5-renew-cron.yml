@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Fetch Content
         run: |
-          curl -L 'https://onedrive-vercel-index-blush-iota.vercel.app/api/raw/?path=/README.md'
+          if [ $(($RANDOM % 5)) == 0 ]; then curl -L 'https://onedrive-vercel-index-blush-iota.vercel.app/api/raw/?path=/README.md'; fi
